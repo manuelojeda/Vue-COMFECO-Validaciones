@@ -10,6 +10,13 @@
     </p>
     <input v-model="nick" type="text" />
 
+    <div v-if="validaciones.nombre.$invalid">
+      El campo <b>Nombre</b> es requerido
+    </div>
+    <div v-if="validaciones.nick.$invalid">
+      El campo <b>Nick</b> es requerido
+    </div>
+
     <button type="submit">
       Guardar
     </button>
